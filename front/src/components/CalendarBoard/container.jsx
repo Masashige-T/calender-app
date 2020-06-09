@@ -4,7 +4,8 @@ import { createCalendar } from "../../services/calendar";
 
 const mapStateToProps = state => ({ calendar: state.calendar });
 
-const margeProps = stateProps => ({
+const margeProps = (stateProps,dispatchProps) => ({
+  month: stateProps.calendar,
   calendar: createCalendar(stateProps.calendar)
 });
 
